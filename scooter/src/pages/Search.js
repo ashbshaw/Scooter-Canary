@@ -1,13 +1,13 @@
 import React from "react";
 
-function Home() {
+function Search() {
     return (
         <div>
             <p>
-                Home
+                Search!
               </p>
         </div>
     );
 }
 
-export default Home;
+export default Search;
