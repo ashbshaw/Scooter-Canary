@@ -37,7 +37,7 @@ class Navs extends React.Component {
           <NavbarBrand href='/'>Scooter Canary</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav Nav className="ml-auto" navbar>
+            <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink href="/about">About</NavLink>
               </NavItem>
