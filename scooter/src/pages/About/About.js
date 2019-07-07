@@ -1,25 +1,28 @@
 import React from "react";
-import Container from "../../components/Container";
-import Col from "../../components/Col";
-import Row from "../../components/Row";
+
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Button from 'react-bootstrap/Button';
 
 function About() {
     return (
-        <div>
-            <Container style={{ marginTop: 30 }}>
-                <Row>
-                    <Col size="md-12">
-                        <h1>Welcome Scooter Canary!</h1>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col size="md-12">
-                        <p>
-                            Hey, here's what we are about.
-                        </p>
-                    </Col>
-                </Row>
-            </Container>
+        <div class='container-fluid'>
+         
+                <Jumbotron>
+                    <h1>Hello, world!</h1>
+                    <p>
+                        This is a simple hero unit, a simple jumbotron-style component for calling
+                        extra attention to featured content or information.
+  </p>
+                    <p>
+                        <Button variant="primary">Learn more</Button>
+                    </p>
+                </Jumbotron>
+                <div className="row">
+                    <div className="col-md-12">
+                        <h2 id="start-cover">My Songs</h2>
+                    </div>
+                </div>
+
         </div>
     );
 }
