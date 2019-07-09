@@ -1,21 +1,38 @@
-import React from "react";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import ScooterList from '../../components/ScooterList';
+import ScooterListCreate from '../../components/ScooterListCreate';
+import ScooterListEdit from '../../components/ScooterListEdit';
+import Map from '../../components/Map';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import SearchButton from '../../components/SearchButton';
-import Map from '../../components/Map';
-import "./search.css";
+import './search.css';
 
-function Search() {
-    return (
-        <div class='container-fluid'>
-            <div id='table'>
-                <Row>
-                        <Col md='2'><SearchButton /></Col>
+class Search extends Component {
+    render() {
+        return (
+            <div class='container-fluid'>
+                <div id='table'>
+                    <Row>
+                        <Col md='2'><SearchButton />
+                            <div className='scooter-container'>
+                                <ul>
+                                    <li><Link to='/ScooterList'>Scooter List</Link></li>
+                                    <li> <Link to='/ScooterListCreate'>Add to Scooter List</Link></li>
+                                    <li><Link to='/ScooterListEdit'>Edit Scooter List</Link></li>
+                                </ul>
+                                <Route path='/ScooterList' exact component={ScooterList} />
+                                <Route path='/ScooterListCreate' component={ScooterListCreate} />
+                                <Route path='/ScooterListEdit' component={ScooterListEdit} />
+                            </div>
+                        </Col>
                         <Col md="10"><Map /> Map</Col>
-                </Row>
+                    </Row>
+                </div>
             </div>
-        </div>
-    );
-}
+        );
+    };
+};
 
 export default Search;
