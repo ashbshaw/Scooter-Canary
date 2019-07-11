@@ -12,25 +12,26 @@ import './search.css';
 class Search extends Component {
     render() {
         return (
-            <div class='container-fluid'>
-                <div id='table'>
-                    <Row>
-                        <Col md='2'><SearchButton />
-                            <div className='scooter-container'>
-                                <ul>
-                                    <li><Link to='/ScooterList'>Scooter List</Link></li>
-                                    <li> <Link to='/ScooterListCreate'>Add to Scooter List</Link></li>
-                                    <li><Link to='/ScooterListEdit'>Edit Scooter List</Link></li>
-                                </ul>
-                                <Route path='/ScooterList' exact component={ScooterList} />
-                                <Route path='/ScooterListCreate' component={ScooterListCreate} />
-                                <Route path='/ScooterListEdit' component={ScooterListEdit} />
-                            </div>
-                        </Col>
-                        <Col md="10"><Map /> Map</Col>
-                    </Row>
+            <Router>
+                <div class='container-fluid'>
+                    <div id='table'>
+                        <Row>
+                            <Col md='2'><SearchButton />
+                                <div className='scooter-container'>
+                                    <ul>
+                                        <li><Link to='/list'>Scooter List</Link></li>
+                                        <li> <Link to='/create'>Add to Scooter List</Link></li>
+                                    </ul>
+                                    <Route path='/list' exact component={ScooterList} />
+                                    <Route path='/edit/:id' component={ScooterListEdit} />
+                                    <Route path='/create' component={ScooterListCreate} />
+                                </div>
+                            </Col>
+                            <Col md="10"><Map /> Map</Col>
+                        </Row>
+                    </div>
                 </div>
-            </div>
+            </Router>
         );
     };
 };
