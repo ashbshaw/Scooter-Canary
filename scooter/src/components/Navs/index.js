@@ -32,7 +32,7 @@ class Navs extends React.Component {
 
   render() {
     return (
-      <div class='container-fluid'>
+      <div className='container-fluid'>
         <Navbar color='light' light expand='md'>
           <NavbarBrand href='/'>Scooter Canary</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />

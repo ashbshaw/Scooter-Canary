@@ -70,9 +70,8 @@ export default class ScooterListCreate extends Component {
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>Location: </label>
-                        <input type="text"
+                        <input type="text" value={this.state.value}
                             className="form-control"
-                            value={this.state.scooter_location}
                             onChange={this.onChangeScooterLocation}
                         />
                     </div>

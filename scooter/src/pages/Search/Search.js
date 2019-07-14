@@ -13,7 +13,7 @@ class Search extends Component {
     render() {
         return (
             <Router>
-                <div class='container-fluid'>
+                <div className='container-fluid'>
                     <div id='table'>
                         <Row>
                             <Col md='2'><SearchButton />
