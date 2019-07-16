@@ -2,18 +2,21 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let Scooter = new Schema({
-    todo_description: {
+    scooter_location: {
         type: String
     },
-    todo_responsible: {
+    scooter_type: {
         type: String
     },
-    todo_priority: {
+    scooter_date: {
         type: String
     },
-    todo_completed: {
+    scooter_priority: {
+        type: String
+    },
+    scooter_resolved: {
         type: Boolean
     }
-});
+})
 
 module.exports = mongoose.model('Scooter', Scooter);

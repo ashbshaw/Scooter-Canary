@@ -12,7 +12,7 @@ export default class ScooterListCreate extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
-            sccoter_location: '',
+            scooter_location: '',
             scooter_type: '',
             scooter_date: '',
             scooter_priority: '',
@@ -59,7 +59,7 @@ export default class ScooterListCreate extends Component {
             scooter_type: '',
             scooter_date: '',
             scooter_priority: '',
-            todo_completed: false
+            scooter_resolved: false
         })
     }
 
