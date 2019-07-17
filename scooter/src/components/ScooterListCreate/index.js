@@ -52,7 +52,7 @@ export default class ScooterListCreate extends Component {
         console.log(`Scooter Location: ${this.state.scooter_location}`);
         console.log(`Scooter Type: ${this.state.scooter_type}`);
         console.log(`Date Found: ${this.state.scooter_date}`);
-        console.log(`Priority 1-5: ${this.state.scooter_priority}`);
+        console.log(`Priority: ${this.state.scooter_priority}`);
 
         this.setState({
             scooter_location: '',
@@ -70,8 +70,10 @@ export default class ScooterListCreate extends Component {
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>Location: </label>
-                        <input type="text" value={this.state.value}
+                        <input type="text" 
+                        // value={this.state.value}
                             className="form-control"
+                            value={this.state.scooter_location}
                             onChange={this.onChangeScooterLocation}
                         />
                     </div>

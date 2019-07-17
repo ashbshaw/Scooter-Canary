@@ -39,7 +39,7 @@ scooterRoutes.route('/:id').get(function(req, res) {
 });
 
 // Update scooter by id in order to mark resolved
-scooterRoutes.route('/update/:id').post(function(req, res) {
+scooterRoutes.route('/edit/:id').post(function(req, res) {
     Scooter.findById(req.params.id, function(err, scooter) {
         if (!scooter)
             res.status(404).send("data is not found");
@@ -60,7 +60,7 @@ scooterRoutes.route('/update/:id').post(function(req, res) {
 });
 
 // Add request to add new scooter data
-scooterRoutes.route('/add').post(function(req, res) {
+scooterRoutes.route('/create').post(function(req, res) {
     let scooter = new Scooter(req.body);
     scooter.save()
         .then(scooter => {
@@ -71,7 +71,7 @@ scooterRoutes.route('/add').post(function(req, res) {
         });
 });
 
-app.use('/scooter', scooterRoutes);
+app.use('/list', scooterRoutes);
 
 app.listen(PORT, function() {
     console.log("Server is running on Port: " + PORT);
