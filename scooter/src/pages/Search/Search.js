@@ -16,7 +16,7 @@ class Search extends Component {
                 <div className='container-fluid'>
                     <div id='table'>
                         <Row>
-                            <Col md='2'><SearchButton />
+                            <Col md='4'><SearchButton />
                                 <div className='scooter-container'>
                                     <ul>
                                         <li><Link to='/list'>Scooter List</Link></li>
@@ -27,7 +27,7 @@ class Search extends Component {
                                     <Route path='/create' component={ScooterListCreate} />
                                 </div>
                             </Col>
-                            <Col md="10"><Map /> Map</Col>
+                            <Col md="8"><Map /> Map</Col>
                         </Row>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class ScooterListCreate extends Component {
 
@@ -54,6 +55,17 @@ export default class ScooterListCreate extends Component {
         console.log(`Date Found: ${this.state.scooter_date}`);
         console.log(`Priority: ${this.state.scooter_priority}`);
 
+        const newScooter = {
+            scooter_location: this.state.scooter_location,
+            scooter_type: this.state.scooter_type,
+            scooter_date: this.state.scooter_date,
+            scooter_priority: this.state.scooter_priority,
+            scooter_resolved: this.state.scooter_resolved
+        };
+
+        axios.post('http://localhost:4000/list/create', newScooter)
+            .then(res => console.log(res.data));
+        
         this.setState({
             scooter_location: '',
             scooter_type: '',
