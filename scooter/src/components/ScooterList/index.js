@@ -9,7 +9,7 @@ const Scooter = props => (
         <td>{props.scooter.scooter_date}</td>
         <td>{props.scooter.scooter_priority}</td>
         <td>
-            <Link to={'/edit'+props.scooter._id}>Update Status</Link>
+            <Link to={'/edit'+props.scooter._id}>Resolve</Link>
         </td>
     </tr>
 );
@@ -23,7 +23,7 @@ export default class ScooterList extends Component {
 
     // Send request to the back end to get scooter list
     componentDidMount() {
-        axios.get('http://localhost:4000/list')
+        axios.get('http://localhost:4000/list/')
         .then(response => {
             this.setState({ scooter: response.data })
         })
@@ -45,11 +45,11 @@ export default class ScooterList extends Component {
                 <table className='table table-striped' style={{ marginTop: 20 }} >
                     <thead>
                         <tr>
-                            <th>Location: </th>
-                            <th>Scooter Type: </th>
-                            <th>Date Reported: </th>
-                            <th>Priority: </th>
-                            <th>Update Status: </th>
+                            <th>Location</th>
+                            <th>Scooter Type</th>
+                            <th>Date Reported</th>
+                            <th>Priority</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
