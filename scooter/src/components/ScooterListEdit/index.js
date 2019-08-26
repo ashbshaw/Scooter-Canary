@@ -65,7 +65,7 @@ export default class ScooterListEdit extends Component {
 
     onChangeScooterResolved(e) {
         this.setState({
-            scooter_resolved: !this.state.todo_completed
+            scooter_resolved: !this.state.scooter_resolved
         });
     }
 
@@ -79,7 +79,7 @@ export default class ScooterListEdit extends Component {
             scooter_resolved: this.state.scooter_resolved
         };
         console.log(obj);
-        axios.post('http://localhost:4000/edit/'+this.props.match.params.id, obj)
+        axios.post('http://localhost:4000/list/edit/'+this.props.match.params.id, obj)
             .then(res => console.log(res.data));
         
         this.props.history.push('/list/');

@@ -2,7 +2,7 @@
     margin: 30px;
 };
 
-.completed {
+.resolved {
     text-decoration: line-through;
   }
 
