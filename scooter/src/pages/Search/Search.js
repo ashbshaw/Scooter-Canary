@@ -4,7 +4,7 @@ import { Row, Col } from 'reactstrap';
 import ScooterList from '../../components/ScooterList';
 import ScooterListCreate from '../../components/ScooterListCreate';
 import ScooterListEdit from '../../components/ScooterListEdit';
-import Map from '../../components/Map';
+import MapContainer from '../../components/Map';
 import './search.css';
 
 class Search extends Component {
@@ -23,7 +23,9 @@ class Search extends Component {
                             </div>
                         </Col>
                         <Col sm={7}>
-                            <Map />
+                            <div className='map-div'>
+                                <MapContainer />
+                            </div>
                         </Col>
                     </Row>
                 </Router>

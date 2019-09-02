@@ -1,8 +1,12 @@
 .search-container {
-    margin: 30px;
+    padding: 20px;
 };
 
 .resolved {
     text-decoration: line-through;
   }
+
+.map-div {
+    height: 700px;
+}
 
