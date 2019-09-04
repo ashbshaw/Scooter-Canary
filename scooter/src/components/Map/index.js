@@ -19,6 +19,7 @@ const MarkersList = props => {
     </span>
   );
 };
+
 class MapContainer extends React.Component {
   constructor(props) {
     super(props);
