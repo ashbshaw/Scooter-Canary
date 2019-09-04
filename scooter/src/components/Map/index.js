@@ -1,6 +1,8 @@
 import React from "react";
 import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 
+const API_KEY = process.env.REACT_APP_API_KEY;
+
 const MarkersList = props => {
   const { locations, ...markerProps } = props;
   return (
@@ -26,7 +28,6 @@ class MapContainer extends React.Component {
     };
     this.handleMapClick = this.handleMapClick.bind(this);
   }
-
   handleMapClick = (ref, map, ev) => {
     const location = ev.latLng;
     this.setState(prevState => ({
@@ -34,16 +35,13 @@ class MapContainer extends React.Component {
     }));
     map.panTo(location);
   };
-
   render() {
-
     const style = {
       width: '50vw',
       height: '75vh',
       'marginLeft': 'auto',
       'marginRight': 'auto'
     };
-
     return (
       <div className="map-container">
         <Map
@@ -63,6 +61,6 @@ class MapContainer extends React.Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: '',
+  apiKey: API_KEY,
   libraries: []
 })(MapContainer);
